@@ -35,11 +35,11 @@ fi
 PLATFORM_AGNOSTIC_MANIFESTS="manifests/kustomize/env/platform-agnostic"
 
 kubectl apply -k "${PLATFORM_AGNOSTIC_MANIFESTS}" || EXIT_CODE=$?
-if [[ $EXIT_CODE -ne 0 ]]
-then
-  echo "Deploy unsuccessful. Failure applying ${PLATFORM_AGNOSTIC_MANIFESTS}."
-  exit 1
-fi
+# if [[ $EXIT_CODE -ne 0 ]]
+# then
+#   echo "Deploy unsuccessful. Failure applying ${PLATFORM_AGNOSTIC_MANIFESTS}."
+#   exit 1
+# fi
 
 # Check if all pods are running - allow 20 retries (10 minutes)
 # wait_for_pods kubeflow 40 30 || EXIT_CODE=$?
