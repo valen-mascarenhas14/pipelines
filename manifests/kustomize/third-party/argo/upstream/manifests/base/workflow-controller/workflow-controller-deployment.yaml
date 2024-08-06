@@ -17,7 +17,7 @@ spec:
       serviceAccountName: argo
       containers:
         - name: workflow-controller
-          image: quay.io/argoproj/workflow-controller:latest
+          image: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/argoproj/workflow-controller:latest
           securityContext:
             readOnlyRootFilesystem: true
             runAsNonRoot: true

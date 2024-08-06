@@ -35,15 +35,15 @@ resources:
   - viewer-sa.yaml
   - kfp-launcher-configmap.yaml
 images:
-  - name: gcr.io/ml-pipeline/api-server
-    newTag: 2.2.0
-  - name: gcr.io/ml-pipeline/persistenceagent
-    newTag: 2.2.0
-  - name: gcr.io/ml-pipeline/scheduledworkflow
-    newTag: 2.2.0
-  - name: gcr.io/ml-pipeline/frontend
-    newTag: 2.2.0
-  - name: gcr.io/ml-pipeline/viewer-crd-controller
-    newTag: 2.2.0
+  - name: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/api-server
+    newTag: latest
+  - name: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/persistenceagent:latest
+    newTag: latest
+  - name: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/scheduledworkflow:latest
+    newTag: latest
+  - name: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/frontend
+    newTag: latest
+  - name: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/viewer-crd-controller
+    newTag: latest
   - name: gcr.io/ml-pipeline/visualization-server
-    newTag: 2.2.0
+    newTag: latest
