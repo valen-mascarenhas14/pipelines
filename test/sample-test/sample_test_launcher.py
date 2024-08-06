@@ -66,7 +66,7 @@ class SampleTest(object):
                 except:
                     kubernetes.config.load_kube_config()
 
-                self._host = 'http://localhost:8888'
+                self._host = ''
             except Exception as err:
                 raise RuntimeError(
                     'Failed to get inverse proxy hostname') from err
