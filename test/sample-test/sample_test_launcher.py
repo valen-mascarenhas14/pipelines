@@ -57,7 +57,7 @@ class SampleTest(object):
         self._target_image_prefix = target_image_prefix
         self._namespace = namespace
         self._host = host
-        if self._host == '':
+        if self._host == 'http://localhost:8888':
             try:
                 # Get inverse proxy hostname from a config map called 'inverse-proxy-config'
                 # in the same namespace as KFP.
