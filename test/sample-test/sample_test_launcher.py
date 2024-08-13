@@ -40,7 +40,7 @@ class SampleTest(object):
     def __init__(self,
                  test_name,
                  results_gcs_dir,
-                 host='',
+                 host='http://localhost:8888',
                  target_image_prefix='',
                  namespace='kubeflow'):
         """Launch a KFP sample_test provided its name.
