@@ -59,6 +59,7 @@ class SampleTest(object):
         self._host = host
         if self._host == 'http://localhost:8888':
             try:
+                print('KFP API host value is %s' % self._host)
                 # Get inverse proxy hostname from a config map called 'inverse-proxy-config'
                 # in the same namespace as KFP.
                 try:
