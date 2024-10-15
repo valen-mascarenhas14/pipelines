@@ -46,4 +46,4 @@ images:
   - name: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/viewer-crd-controller
     newTag: latest
   - name: gcr.io/ml-pipeline/visualization-server
-    newTag: newTag: latest
+    newTag: latest
