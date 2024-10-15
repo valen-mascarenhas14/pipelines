@@ -15,13 +15,13 @@ resources:
 
 images:
 - name: gcr.io/ml-pipeline/api-server
-  newName: kind-registry:5000/apiserver
+  newName: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/api-server
   newTag: latest
 - name: gcr.io/ml-pipeline/persistenceagent
-  newName: kind-registry:5000/persistenceagent
+  newName: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/persistenceagent
   newTag: latest
 - name: gcr.io/ml-pipeline/scheduledworkflow
-  newName: kind-registry:5000/scheduledworkflow
+  newName: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/scheduledworkflow
   newTag: latest
 - name: '*/aipipeline/tekton-exithandler-controller'
   newTag: latest
