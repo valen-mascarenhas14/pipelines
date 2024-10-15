@@ -43,11 +43,11 @@ fi
 
 echo "Patching deployments to use built docker images..."
 # Patch API server
-kubectl patch deployment ml-pipeline -p '{"spec": {"template": {"spec": {"containers": [{"name": "ml-pipeline-api-server", "image": "kind-registry:5000/apiserver"}]}}}}' -n kubeflow
+kubectl patch deployment ml-pipeline -p '{"spec": {"template": {"spec": {"containers": [{"name": "ml-pipeline-api-server", "image": "na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/api-server"}]}}}}' -n kubeflow
 # Patch persistence agent
-kubectl patch deployment.apps/ml-pipeline-persistenceagent -p '{"spec": {"template": {"spec": {"containers": [{"name": "ml-pipeline-persistenceagent", "image": "kind-registry:5000/persistenceagent"}]}}}}' -n kubeflow
+kubectl patch deployment.apps/ml-pipeline-persistenceagent -p '{"spec": {"template": {"spec": {"containers": [{"name": "ml-pipeline-persistenceagent", "image": "na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/persistenceagent"}]}}}}' -n kubeflow
 # Patch scheduled workflow
-kubectl patch deployment.apps/ml-pipeline-scheduledworkflow -p '{"spec": {"template": {"spec": {"containers": [{"name": "ml-pipeline-scheduledworkflow", "image": "kind-registry:5000/scheduledworkflow"}]}}}}' -n kubeflow
+kubectl patch deployment.apps/ml-pipeline-scheduledworkflow -p '{"spec": {"template": {"spec": {"containers": [{"name": "ml-pipeline-scheduledworkflow", "image": "na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/scheduledworkflow"}]}}}}' -n kubeflow
 
 # Update environment variables to override driver / launcher
 kubectl set env deployments/ml-pipeline V2_DRIVER_IMAGE=kind-registry:5000/driver -n kubeflow
