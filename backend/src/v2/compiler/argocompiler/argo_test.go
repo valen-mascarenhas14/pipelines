@@ -87,7 +87,7 @@ func Test_argo_compiler(t *testing.T) {
 			// mask the driver launcher image hash to maintain test stability
 			for _, template := range wf.Spec.Templates {
 				if template.Container != nil && strings.Contains(template.Container.Image, "kfp-driver") {
-					template.Container.Image = "gcr.io/ml-pipeline/kfp-driver"
+					template.Container.Image = "na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/kfp-driver:latest"
 				}
 				if template.Container != nil && strings.Contains(template.Container.Image, "kfp-launcher") {
 					template.Container.Image = "gcr.io/ml-pipeline/kfp-launcher"

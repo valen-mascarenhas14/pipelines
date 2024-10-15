@@ -18,7 +18,7 @@ on:
 
 jobs:
   initialization-tests-v1:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -45,8 +45,11 @@ jobs:
           name: kfp-initialization-tests-v1-artifacts
           path: /tmp/tmp.*/*
 
+      - name: Delete KFP cluster
+        run: kind delete cluster --name=kfp
+
   initialization-tests-v2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -73,8 +76,11 @@ jobs:
           name: kfp-initialization-tests-v2-artifacts
           path: /tmp/tmp.*/*
 
+      - name: Delete KFP cluster
+        run: kind delete cluster --name=kfp
+
   api-integration-tests-v1:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -101,8 +107,11 @@ jobs:
           name: kfp-api-integration-tests-v1-artifacts
           path: /tmp/tmp.*/*
 
+      - name: Delete KFP cluster
+        run: kind delete cluster --name=kfp          
+
   api-integration-tests-v2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -129,8 +138,11 @@ jobs:
           name: kfp-api-integration-tests-v2-artifacts
           path: /tmp/tmp.*/*
 
+      - name: Delete KFP cluster
+        run: kind delete cluster --name=kfp
+
   frontend-integration-test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -163,8 +175,11 @@ jobs:
           name: kfp-frontend-integration-test-artifacts
           path: /tmp/tmp.*/*
 
+      - name: Delete KFP cluster
+        run: kind delete cluster --name=kfp
+
   basic-sample-tests:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -195,3 +210,6 @@ jobs:
         with:
           name: kfp-basic-sample-tests-artifacts
           path: /tmp/tmp.*/*
+
+      - name: Delete KFP cluster
+        run: kind delete cluster --name=kfp

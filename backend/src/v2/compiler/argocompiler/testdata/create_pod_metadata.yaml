@@ -55,7 +55,7 @@ spec:
       - '{{inputs.parameters.kubernetes-config}}'
       command:
       - driver
-      image: gcr.io/ml-pipeline/kfp-driver
+      image: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/kfp-driver:latest
       name: ""
       resources:
         limits:
@@ -244,7 +244,7 @@ spec:
       - '{{outputs.parameters.condition.path}}'
       command:
       - driver
-      image: gcr.io/ml-pipeline/kfp-driver
+      image: na.artifactory.swg-devops.com/sys-linux-power-team-ftp3distro-docker-images-docker-local/kubeflow-ppc/kfp-driver:latest
       name: ""
       resources:
         limits:
