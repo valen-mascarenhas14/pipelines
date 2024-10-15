@@ -16,6 +16,10 @@ runs:
       shell: bash
       run: kind create cluster --name=kfp --config=/home/ubuntu/valen/config.yaml --image quay.io/powercloud/kind-node:v1.30.2
 
+    - name: Setup cache server
+      shell: bash
+      run: bash /home/ubuntu/valen/setup-cache-server.sh
+
     # - name: Build images
     #   shell: bash
     #   run: ./scripts/deploy/github/build-images.sh
